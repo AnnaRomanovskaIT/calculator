@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calculator Test Suite" verbose="1">
+    <listeners>
+        <listener class-name="org.example.tests.CustomListener"/>
+    </listeners>
+    <test name="Addition Tests">
+        <parameter name="name" value="addition"/>
+        <groups>
+            <run>
+                <include name="addition"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.tests.AdditionTest"/>
+        </classes>
+    </test>
+    <test name="Subtraction Tests">
+        <groups>
+            <run>
+                <include name="subtraction"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.tests.SubtractionTest"/>
+        </classes>
+    </test>
+    <test name="Multiplication Tests">
+        <groups>
+            <run>
+                <include name="multiplication"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.tests.MultiplicationTest"/>
+        </classes>
+    </test>
+    <test name="Division Tests">
+        <groups>
+            <run>
+                <include name="division"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.tests.DivisionTest"/>
+        </classes>
+    </test>
+    <test name="Calculator Tests">
+        <parameter name="name" value="addition"/>
+        <classes>
+            <class name="org.example.tests.AdditionTest"/>
+            <class name="org.example.tests.SubtractionTest"/>
+            <class name="org.example.tests.MultiplicationTest"/>
+            <class name="org.example.tests.DivisionTest"/>
+            <class name="org.example.tests.DependencyTest"/>
+        </classes>
+    </test>
+</suite>
