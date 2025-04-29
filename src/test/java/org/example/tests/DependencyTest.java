@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class DependencyTest extends BaseClass {
     private double result;
 
-    @Test(enable=false)
+    @Test(enabled=false)
     public void alwaysFails(){
         Assert.fail();
     }
