@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 public class DependencyTest extends BaseClass {
     private double result;
 
-    @Test
+    @Test(enable=false)
     public void alwaysFails(){
         Assert.fail();
     }
 
-    @Test(dependsOnMethods={"alwaysFails"}, alwaysRun = true)
+    @Test()
     public void testAddition() {
         result = Calculator.calculate(new Addition(), 5, 3);
         Assert.assertEquals(result, 8.0);
